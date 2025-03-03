@@ -1,4 +1,5 @@
 import { envs } from "./config/env";
+import { AppRutes } from "./presentation/routes";
 import { Server } from "./presentation/server";
 
 
@@ -9,9 +10,10 @@ import { Server } from "./presentation/server";
 function main() {
   const server = new Server({
     port: envs.PORT,
-    public_path: envs.PUBLIC_PATH
+    public_path: envs.PUBLIC_PATH,
+    routes: AppRutes.routes
   })
   server.start()
 }
 
-// Me quede en la parte de Variables de Entorno, Curso de Node JS Seccion 13
+// Me quede en la parte de Todo Controller, Curso de Node JS Seccion 14
